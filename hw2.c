@@ -1,28 +1,41 @@
 
 #include <stdio.h>
-int k;
-int main()
-{
+int k,n,i,j,b;
+
+int main(){
     printf("dame el numero");
     scanf("%d", &k);
     
     int count, n, prime;
 
-    for ( n = 1 ; n <= k ; n++ ){
+    for ( i = 1 ; i <= k ; i++ ){
         prime = 1;
         count = 2;
 
-        while ( count <= n / 2 && prime )
-        {
-            if ( n % count == 0 )
+        while ( count <= i / 2 && prime ){
+            if ( i % count == 0 )
                 prime = 0;
 
             count++;
         }
 
         if ( prime )
-            printf( "%d \n", n );
+            printf( "%d \n", i );
     }
+	
+	for (j=7;j>=0;j--){
+		b = k>>j;
+		if (b&1){
+			printf("1");
+		}else {
+			printf("0");
+		}
+        
+	}	
+    printf("\n");
+
 
    return 0;
 }
+	
+	
