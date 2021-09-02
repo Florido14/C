@@ -1,12 +1,10 @@
 
 #include <stdio.h>
-int k,n,i,j,b;
+int k,n,i,j,b,count, n, prime;
 
 int main(){
     printf("dame el numero");
     scanf("%d", &k);
-    
-    int count, n, prime;
 
     for ( i = 1 ; i <= k ; i++ ){
         prime = 1;
